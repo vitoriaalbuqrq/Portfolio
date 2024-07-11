@@ -1,0 +1,44 @@
+.contact-wrapper h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    margin: 4rem 0;
+    position: relative;
+    background: #130f2a;
+    border-radius: 0.6rem;
+    border: 1.5px solid #6751b9;
+    padding: 3rem;
+}
+
+.contact-content{
+    display: flex;
+    gap: 3rem;
+}
+
+.contact-left{
+    flex: 1;
+}
+.contact-right{
+    flex: 1;
+}
+
+@media (max-width: 768px){
+    .contact-container{
+        padding: 1.5rem;
+    }
+    .contact-content {
+        flex-direction: column-reverse;
+    }
+
+    .contact-wrapper h5 {
+        font-size: 1.3rem;
+        margin-bottom: 0rem;
+    }
+    .contact-right{
+        width: 100%;
+    }
+}
+

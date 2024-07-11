@@ -1,0 +1,137 @@
+.project-card {
+    background: #130f2a;
+    border-radius: 0.65rem;
+    border: 1.5px solid #6751b9;
+    padding: 1.5rem;
+    margin: 0 1rem;
+}
+
+.project-info h6 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+}
+
+.project-img{
+    width: auto;
+    height: 250px;
+    margin-bottom: 0.7rem;
+
+}
+
+.project-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info p {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.7rem;
+}
+
+.project-info ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.project-info ul li {
+    font-size: 0.7rem;
+    font-weight: 400;
+    background: #060417;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.7rem;
+}
+
+.project-duration {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    background: rgba(103, 81, 185, 0.5);
+    border-radius: 0.3rem;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 1.3rem;
+}
+.project-buttons{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.project-buttons a:nth-child(1){
+    background: transparent;
+    color: #a892fe;
+}
+.project-buttons a:nth-child(1) .icon-btn{
+    color: #a892fe;
+}
+
+.project-buttons a {
+    width: 30%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    border: 1.5px solid #a892fe;
+    border-radius: 0.6rem;
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    padding: 0.3rem 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-btn{
+    margin-left: auto;
+}
+
+.project-buttons a:hover {
+    color: #a892fe;
+    background: transparent;
+}
+
+.project-buttons a:hover .icon-btn{
+    color: #a892fe;
+}
+
+.icon-btn {
+    width: 1.2rem !important;
+}
+
+@media (max-width: 768px) {
+
+    .project-card {
+        margin: 0;
+    }
+
+    .project-info h6 {
+        font-size: 0.95rem;
+    }
+
+    .project-info p {
+        font-size: 0.8rem;
+    }
+
+    .project-info ul li {
+        font-size: 0.8rem;
+    } 
+}
+
+@media (max-width: 425px) {
+    .project-buttons a{
+        width: 50%;
+        font-size: 0.8rem;
+    }
+
+    .project-img{
+        width: auto;
+        height: 150px;
+    }
+    
+}
+

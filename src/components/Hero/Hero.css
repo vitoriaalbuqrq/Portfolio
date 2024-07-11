@@ -1,0 +1,204 @@
+.hero-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 3rem;
+}
+
+.hero-container::after,
+.hero-container::before {
+    content: " ";
+    width: 28.125rem;
+    height: 28.125rem;
+    border-radius: 28.125rem;
+    background: #7c66e3;
+    position: absolute;
+    z-index: -1;
+    filter: blur(225px);
+}
+
+.hero-container::after {
+    top: -3rem;
+    left: -5rem;
+}
+
+.hero-container::before {
+    bottom: 23;
+    right: -3rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title{
+    margin-bottom: 1.6rem;
+    text-align: start;
+}
+
+.hero-title h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+}
+
+.hero-title h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #a993fe;
+}
+
+.hero-content p {
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.download-cv{
+    width: 25%
+}
+
+.download-cv a{
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    padding: 0.6rem 1.5rem;
+    border: none;
+    outline: 1.3px solig transparent;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    text-decoration: none;
+}
+
+.download-cv a:hover{
+    color: #a993fe;
+    background: transparent;
+    outline: 1.3px solid #a993fe;
+}
+
+.hero-content-img{
+    flex: 0.5; 
+    margin-top: 5rem;
+    transition: all 0.3s ease;
+}
+
+.hero-content-img:hover{
+    transform: translateY(-0.4rem);
+}
+
+.hero-img{
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-105deg, #a993fe 0%, #7e61e7 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 0 15px #7c66e3;
+}
+
+.hero-img img{
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1025px){
+    .hero-content h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+
+    .hero-img img {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 768px){
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-img {
+        margin: 2rem 0 2rem 0;
+    }
+
+    .download-cv{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .hero-container h1 {
+        margin-top: 3rem;
+    }
+
+    .hero-content h1,
+    .hero-content p {
+        width: auto;
+        text-align: center;
+    }
+
+    .hero-container::after,
+    .hero-container::before {
+        content: " ";
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .hero-container::after {
+        top: 0rem;
+        left: 0rem;
+    }
+
+    .hero-container::before {
+        bottom: 2rem;
+        right: 0rem;
+    }
+}
+
+@media (max-width: 425px) {
+    
+    .hero-title h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+        text-align: start;
+    }
+
+    .hero-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.7rem;
+        line-height: 1.3rem;
+    }
+
+    .hero-img {
+        gap: 1rem;
+    }
+    .hero-content-img{
+        margin-top: 0rem;
+    }
+
+    .hero-img{
+        width: 250px;
+        height: 250px;
+    }
+}
+
