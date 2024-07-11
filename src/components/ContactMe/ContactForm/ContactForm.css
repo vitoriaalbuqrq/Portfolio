@@ -5,13 +5,19 @@
 form {
     display: flex;
     flex-direction: column;
-    grid-gap: 1.5rem;
+    margin-inline: 1.5rem;
+    margin-block: 1.5rem;
 }
 
 .name-container {
     display: flex;
     align-items: center;
     grid-gap: 1.5rem;
+}
+
+.error-message{
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
 }
 
 form input,
@@ -24,6 +30,12 @@ form textarea {
     border-radius: 0.6rem;
     border: 1.5px solid #6751b9;
     padding: 1rem;
+}
+
+input[name="email"],
+textarea[name="message"],
+.form-button{
+    margin-top: 1.5rem;
 }
 
 form .form-button {

@@ -1,18 +1,48 @@
 import React, { useState } from 'react'
-import './ContactForm.css'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import emailJs from '@emailjs/browser'
+
+import './ContactForm.css'
 
 const ContactForm = () => {
   const [firstname, setFirstname] = useState('')
   const [lastname, setLastname] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [emailValid, setEmailValid] = useState(true);
+  const [emailError, setEmailError] = useState('');
+
+  const validateEmail = (value) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(value);
+  };
+
+  const handleEmailChange = (e) => {
+    const { value } = e.target;
+    setEmail(value);
+  };
+
+  const handleEmailBlur = () => {
+    const valid = validateEmail(email);
+    setEmailValid(valid);
+    if (!valid) {
+      setEmailError('Email inválido');
+    } else {
+      setEmailError('');
+    }
+  };
 
   function sendEmail(e){
     e.preventDefault();
 
-    if(firstname === "" || lastname === "" || email === "" || message === ""){
-      alert("Preencha todos os campos");
+    if (firstname === "" || lastname === "" || email === "" || message === "") {
+      toast.error("Preencha todos os campos");
+      return;
+    }
+
+    if (!emailValid) {
+      setEmailError('Email inválido.');
       return;
     }
 
@@ -26,12 +56,14 @@ const ContactForm = () => {
 
     .then((response) => {
       console.log("Email enviado", response.status, response.text)
+      toast.success("Email enviado com sucesso!");
       setFirstname("")
       setLastname("")
       setEmail("")
       setMessage("")
     }, (err) => {
-      console.log(err)
+      console.error("Erro ao enviar email:", err);
+      toast.error("Erro ao enviar email.");
     })
   }
 
@@ -56,8 +88,12 @@ const ContactForm = () => {
           type="text"
           name="email"
           placeholder='Email'
-          onChange={(e) => setEmail(e.target.value)}
-          value={email} />
+          onChange={handleEmailChange} 
+          onBlur={handleEmailBlur}
+          value={email} 
+          className={emailError ? 'invalid-email' : ''}
+          />
+          {emailError && <p className="error-message">{emailError}</p>}
         <textarea
           type="text"
           name="message"
