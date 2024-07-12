@@ -6,7 +6,7 @@
 .projects-container h5 {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 
 .arrow-left,
@@ -47,5 +47,14 @@
 
     .arrow-right {
         right: 0rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .projects-container {
+        margin-bottom: 0rem;
+    }
+    .projects-container h5 {
+        margin-bottom: 2rem;
     }
 }
