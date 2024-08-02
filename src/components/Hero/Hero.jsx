@@ -1,4 +1,3 @@
-import React from 'react'
 import './Hero.css'
 import curriculumPDF from '/assets/Curriculo-Vitoria.pdf'
 import { TypeAnimation } from 'react-type-animation';
