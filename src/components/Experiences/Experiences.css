@@ -115,6 +115,10 @@
   gap: 0.5rem;
 }
 
+.experience-timeline{
+  width: 100%;
+}
+
 .timeline {
   display: flex;
   flex-direction: column;

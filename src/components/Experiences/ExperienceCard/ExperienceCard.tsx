@@ -1,5 +1,5 @@
 import '../../Experiences/Experiences.css'
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
 const ExperienceCard = ({ title, duration, company, details }) => {
