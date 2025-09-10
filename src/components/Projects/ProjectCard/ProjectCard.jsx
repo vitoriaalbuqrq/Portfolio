@@ -1,6 +1,6 @@
 import React from 'react'
 import './ProjectCard.css'
-import { IoArrowForwardSharp } from "react-icons/io5";
+import { MdArrowOutward } from 'react-icons/md';
 
 const ProjectCard = ({ details }) => {
     return (
@@ -9,8 +9,11 @@ const ProjectCard = ({ details }) => {
                 <img src={details.image} alt={details.title} />
             </div>
             <div className="project-info">
-                <h6>{details.title}</h6>
-                <div className="project-duration">{details.date}</div>
+                <div className='project-title'>
+                    <h6>{details.title}</h6>
+                    <small>{details.date}</small>
+                </div>
+                <div className="project-role">{details.role}</div>
                 <p>{details.description}</p>
                 <ul>
                     {details.stacks.map((item) => (
@@ -22,7 +25,7 @@ const ProjectCard = ({ details }) => {
                         <a href={details.github_link} target="_blank" rel="noopener noreferrer">GitHub</a>
                     )}
                     {details.access_link && (
-                        <a href={details.access_link} target="_blank" rel="noopener noreferrer">Acesse aqui<IoArrowForwardSharp className='icon-btn' /> </a>
+                        <a href={details.access_link} target="_blank" rel="noopener noreferrer">Demo<MdArrowOutward className='icon-btn' /> </a>
                     )}
                 </div>
             </div>

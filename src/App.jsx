@@ -5,10 +5,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero';
-import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import ContactMe from './components/ContactMe/ContactMe';
 import Footer from './components/Footer/Footer';
+import Experiences from './components/Experiences/Experiences';
+import Services from './components/ServicesSkills/Services';
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
       <ToastContainer />
       <div className="container">
         <Hero />
-        <Skills />
+        <Services />
+        <Experiences />
         <Projects />
         <ContactMe />
       </div>

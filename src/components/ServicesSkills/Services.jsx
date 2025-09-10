@@ -1,7 +1,7 @@
 import React from 'react'
 import './Skills.css'
 import SkillCard from './SkillCard/SkillCard';
-import { FaCode, FaPenRuler, FaReact, FaBootstrap, FaNodeJs, FaJava, FaFigma, FaGitAlt } from "react-icons/fa6";
+import { FaCode, FaPenRuler, FaReact, FaBootstrap, FaNodeJs, FaJava, FaFigma, FaGitAlt, FaAngular, FaPython } from "react-icons/fa6";
 import { BiLogoTypescript, BiLogoJavascript, BiLogoDjango, } from "react-icons/bi";
 import { TbSql } from "react-icons/tb";
 import { MdOutlineWeb } from "react-icons/md";
@@ -9,11 +9,13 @@ import { MdOutlineWeb } from "react-icons/md";
 import { motion } from 'framer-motion';
 //variants
 import { fadeIn } from '../variants'
+import { RiTailwindCssFill } from 'react-icons/ri';
+import { SiSolidity } from 'react-icons/si';
 
-const Skills = () => {
-    const frontendSkills = [FaReact, FaBootstrap, BiLogoTypescript, BiLogoJavascript];
-    const backendSkills = [FaNodeJs, BiLogoDjango, FaJava, TbSql, FaGitAlt];
-    const webDesignSkills = [FaFigma];
+const Services = () => {
+    const frontendSkills = [FaReact, BiLogoTypescript, BiLogoJavascript, FaAngular, RiTailwindCssFill, FaBootstrap];
+    const backendSkills = [FaNodeJs, FaPython, SiSolidity, FaJava, TbSql, FaGitAlt];
+    const uxUi = [FaFigma];
 
     return (
         <motion.section
@@ -22,8 +24,8 @@ const Skills = () => {
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
 
-            className="skills-container" id="skills">
-            <h5>Skills</h5>
+            className="skills-container" id="services">
+            <h5>Serviços</h5>
             <div className="skills-content">
                 <SkillCard
                     title='Frontend'
@@ -36,13 +38,13 @@ const Skills = () => {
                     skills={backendSkills}
                     description='Criação de APIs funcionais e integração eficiente com bancos de dados para aplicações backend.' />
                 <SkillCard
-                    title='Web Designer'
+                    title='UX/UI'
                     icon={<FaPenRuler className="icon" />}
-                    skills={webDesignSkills}
-                    description='Desenvolvimento de designs visualmente atraentes e amigáveis ao usuário.' />
+                    skills={uxUi}
+                    description='Design de interfaces modernas, atraentes e focadas na experiência do usuário.' />
             </div>
         </motion.section>
     )
 }
 
-export default Skills
+export default Services

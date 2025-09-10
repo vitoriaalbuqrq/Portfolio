@@ -20,12 +20,13 @@ const Hero = () => {
           <h1>Vitória Albuquerque</h1>
           <h2>
             <TypeAnimation
-              sequence={["Desenvolvedora Full-Stack"]}
+              sequence={["Desenvolvedora Full Stack"]}
               speed={50}
             />
           </h2>
         </div>
-        <p>Olá! Sou Vitória, desenvolvedora Full-Stack graduanda em Ciência da Computação na UEPB, com experiência em aplicações web tanto no backend quanto no frontend. Explore meus projetos e entre em contato!</p>
+        <p>Olá! Sou Vitória, desenvolvedora Full Stack graduada em Ciência da Computação pela UEPB. Sou apaixonada por tecnologia e gosto de transformar ideias em soluções digitais. Confira meus projetos e entre em contato!</p>
+        {/* <p>Olá! Sou Vitória, desenvolvedora Full Stack graduada em Ciência da Computação pela UEPB, com experiência em aplicações web tanto no backend quanto no frontend. Explore meus projetos e entre em contato!</p> */}
         <div className="download-cv">
           <a href={curriculumPDF} download="Vitoria_Albuquerque_CV.pdf">Download CV</a>
         </div>
